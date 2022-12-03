@@ -14,7 +14,7 @@ curl -sS https://raw.githubusercontent.com/LM-Firefly/Rules/master/GlobalMedia.l
 
 curl -sS https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/proxy.txt | \
     grep -E 'DOMAIN-SUFFIX,|DOMAIN,' | \
-    sed 's/$/&,proxy/g; s/DOMAIN/HOST/g; s/DOMAIN-SUFFIX/HOST-SUFFIX/g' > proxy
+    sed 's/$/&,Global/g; s/DOMAIN/HOST/g; s/DOMAIN-SUFFIX/HOST-SUFFIX/g' > proxy
 
 curl -sS https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/YouTube/YouTube.list | \
     grep -E 'HOST-SUFFIX,|HOST,|IP-CIDR,|IP6-CIDR,|USER-AGENT,|HOST-KEYWORD,|HOST-WILDCARD,' | \
