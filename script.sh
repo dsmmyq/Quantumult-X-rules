@@ -10,7 +10,7 @@ curl -sS https://raw.githubusercontent.com/LM-Firefly/Rules/master/Apple.list | 
 
 curl -sS https://raw.githubusercontent.com/LM-Firefly/Rules/master/GlobalMedia.list | \
     grep -E 'DOMAIN-SUFFIX,|IP-CIDR,|DOMAIN-KEYWORD,|USER-AGENT,' | \
-    sed 's/$/&,GlobalMedia/g; s/DOMAIN-KEYWORD/HOST-KEYWORD/g; s/,no-resolve,GlobalMedia/,GlobalMedia,no-resolve/g' > GlobalMedia
+    sed '/DOMAIN-SUFFIX,.fox/d; /DOMAIN-SUFFIX,.youtube/d; s/$/&,GlobalMedia/g; s/DOMAIN-KEYWORD/HOST-KEYWORD/g; s/,no-resolve,GlobalMedia/,GlobalMedia,no-resolve/g' > GlobalMedia
 
 curl -sS https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/proxy.txt | \
     grep -E 'DOMAIN-SUFFIX,|DOMAIN,' | \
