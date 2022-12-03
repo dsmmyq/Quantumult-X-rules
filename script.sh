@@ -25,3 +25,11 @@ curl -sS https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 
 curl -sS https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/Netflix/Netflix.list | \
     grep -E 'HOST-SUFFIX,|HOST,|IP-CIDR,|IP6-CIDR,|USER-AGENT,|HOST-KEYWORD,|HOST-WILDCARD,'  > Netflix
+mkdir output
+mv Microsoft output/Microsoft.list
+mv Apple output/Apple.list
+mv GlobalMedia output/GlobalMedia.list
+mv proxy output/proxy.list
+mv YouTube output/YouTube.list
+mv Google output/Google.list
+mv Netflix output/Netflix.list
